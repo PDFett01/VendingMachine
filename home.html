@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Vending Machine</title>
+        <link href="css/bootstrap.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <h1 style="text-align:center">Vending Machine</h1>
+            <hr/>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                    <div class="col-md-3" id="item-button" onclick="itemWanted(1)">
+                        <h3>1</h3>
+                        <h3 style="text-align:center">Snickers</h3>
+                        <h3 style="text-align:center">$1.50</h3>
+                        <h3 style="text-align:center" class="quantity-class" id="quantity-container1"></h3>
+                    </div>
+                    <div class="col-md-3"  id="item-button" onclick="itemWanted(2)">
+                        <h3>2</h3>
+                        <h3 style="text-align:center">M & Ms</h3>
+                        <h3 style="text-align:center">$1.25</h3>
+                        <h3 style="text-align:center" class="quantity-class" id="quantity-container2"></h3>
+                    </div>
+                    <div class="col-md-3"  id="item-button" onclick="itemWanted(3)">
+                        <h3>3</h3>
+                        <h3 style="text-align:center">Almond Joy</h3>
+                        <h3 style="text-align:center">$1.25</h3>
+                        <h3 style="text-align:center" class="quantity-class" id="quantity-container3"></h3>              
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="row">
+                        <h3 style="text-align:center">Total $ IN</h3>
+                    </div>
+                    <div class="row" align="center">
+                        <p id="demo"><br/></p>
+                    </div>
+                    <div class ="money-buttons row form-group">
+                        <div class="col-md-6">
+                            <button type="button"
+                                    id="add-dollar"
+                                    class="btn btn-default"
+                                    onclick="addMoney(1.00)">
+                                Add Dollar
+                            </button>        
+                        </div>
+                        <div class="col-md-6">
+                            <button type="button"
+                                    id="add-quarter"
+                                    class="btn btn-default"
+                                    onclick="addMoney(.25)">
+                                Add Quarter
+                            </button>        
+                        </div>
+                    </div>
+                    <div class ="money-buttons row form-group" >
+                        <div class="col-md-6">
+                            <button type="button"
+                                    id="add-dime"
+                                    class="btn btn-default"
+                                    onclick="addMoney(.10)">
+                                Add Dime
+                            </button>        
+                        </div>
+                        <div class="col-md-6">
+                            <button type="button"
+                                    id="add-nickle"
+                                    class="btn btn-default"
+                                    onclick="addMoney(.05)">
+                                Add Nickle
+                            </button>        
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-9">
+                    <div class="col-md-3" id="item-button" onclick="itemWanted(4)">
+                        <h3>4</h3>
+                        <h3 style="text-align:center">Milky Way</h3>
+                        <h3 style="text-align:center">$1.65</h3>
+                        <h3 style="text-align:center" class="quantity-class" id="quantity-container4"></h3>
+                    </div>
+                    <div class="col-md-3"  id="item-button" onclick="itemWanted(5)">
+                        <h3>5</h3>
+                        <h3 style="text-align:center">Payday</h3>
+                        <h3 style="text-align:center">$1.75</h3>
+                        <h3 style="text-align:center" class="quantity-class" id="quantity-container5"></h3>
+                    </div>
+                    <div class="col-md-3"  id="item-button" onclick="itemWanted(6)">
+                        <h3>6</h3>
+                        <h3 style="text-align:center">Reese's</h3>
+                        <h3 style="text-align:center">$1.50</h3>
+                        <h3 style="text-align:center" class="quantity-class" id="quantity-container6"></h3>  
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="row">
+                        <h3 style="text-align:center">Message</h3>
+                    </div>
+                    <div class="row">
+                        <div>
+                            <p id="message-box" align="center"><br/></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label for="item-purchased" class="col-md-4 control-label">
+                            <h4>Item:</h4>
+                        </label>
+                        <div class="col-md-8">
+                            <p id="item-box" align="center"><br/></p>
+                        </div>
+                    </div>
+                    <div class="row" align="center">
+                        <button type="button"
+                                id="make-purchase"
+                                class="btn btn-default">
+                                Make Purchase
+                        </button>
+                    </div> 
+                </div>
+            </div>    
+            <div class="row">
+                    <div class="col-md-9">
+                        <div class="col-md-3" id="item-button" onclick="itemWanted(7)">
+                            <h3>7</h3>
+                            <h3 style="text-align:center">Pringles</h3>
+                            <h3 style="text-align:center">$2.35</h3>
+                        <h3 style="text-align:center" class="quantity-class" id="quantity-container7"></h3>
+                        </div>
+                        <div class="col-md-3"  id="item-button" onclick="itemWanted(8)">
+                            <h3>8</h3>
+                            <h3 style="text-align:center">Cheezits</h3>
+                            <h3 style="text-align:center">$2.00</h3>
+                        <h3 style="text-align:center" class="quantity-class" id="quantity-container8"></h3>
+                        </div>
+                        <div class="col-md-3"  id="item-button" onclick="itemWanted(9)">
+                            <h3>9</h3>
+                            <h3 style="text-align:center">Doritos</h3>
+                            <h3 style="text-align:center">$1.95</h3>
+                        <h3 style="text-align:center" class="quantity-class" id="quantity-container9"></h3>              
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="row">
+                            <h3 style="text-align:center">Change</h3>
+                        </div>
+                        <div class="row">
+                            <div>
+                                <p id="change-box" align="center"><br/><br/><br/></p>
+                            </div>
+                        </div>
+                        <div class="row" align="center">
+                            <button type="button"
+                                id="change-return"
+                                class="btn btn-default"
+                                onclick="returnChange()">
+                                Change Return
+                            </button>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <script src="js/jquery-2.2.4.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script src="js/home.js"></script>
+    </body>
+<style>
+    #item-button {
+        border-style: solid;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        background-color: lightblue;
+    }
+
+    #input-amount{
+        margin-bottom: 10px;
+    }
+
+    #demo, #item-box {
+        border-style: solid;
+    }
+
+    #message-box, #change-box {
+        margin-bottom: 10px;
+        border-style: solid;
+    }
+
+    .money-buttons {
+        margin-bottom: 8px;
+    }
+
+</style>
+</html>
